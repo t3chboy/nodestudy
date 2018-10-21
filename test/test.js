@@ -48,9 +48,14 @@ describe('/GET Hotel For specific Hotel', () => {
 
 
 describe('/POST Add new Hotel', () => {
-	it('it should get all the rooms available with rooms', (done) =>{
-		let jsonDataObj = {"name":"Taj Vivanta","city":"Mumbai","state":"MH","address":"Opp gateway of India",
-	"total_room_count":60 }
+	it('it should create new hotel', (done) =>{
+		let jsonDataObj = {
+			"name":"Deltin Royale Cruz",
+			"city":"Panjim",
+			"state":"GOA",
+			"address":"Opp River Gate",
+			"total_room_count":60 
+		}
 		let options = {
 			method: 'POST',
 			url: 'http://localhost:4000/hotel',

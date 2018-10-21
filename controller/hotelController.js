@@ -8,7 +8,6 @@ class hotelController {
 	
 	constructor() {
 		this._hotelModelObj = new hotelModelClass();
-		console.log( this );
 	}
 	
 

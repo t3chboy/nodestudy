@@ -82,20 +82,19 @@ class roomModel{
 			if( bodyParams.length >= 1 ){
 				
 				for( let eachParam of bodyParams ){
-					roomData.push([ hotelId, eachParam.room_description, eachParam.cost_per_day, eachParam.room_no ]);	
-
+					roomData.push([ parseInt(hotelId), eachParam.room_description, eachParam.cost_per_day, eachParam.room_no ]);	
 				}
 			}
-		
-			const insertQuery = "INSERT INTO room_master ( hotel_id, room_description, cost_per_day, room_no ) values ( ? ) ";
+
+			const insertQuery = "INSERT INTO room_master ( hotel_id, room_description, cost_per_day, room_no ) values  ?  ";
 			
-			mysqlService.query( insertQuery , roomData , ( error , results, fields )=>{
+			mysqlService.query( insertQuery , [roomData]  , ( error , results, fields )=>{
 				
 				if (error) {
 					return reject([error.code , error.errno, error.sqlMessage]);
 				};
 
-				if (results.affectedRows == 1) {
+				if (results.affectedRows > 0) {
 					return resolve('Created successfully.');
 				}
 				

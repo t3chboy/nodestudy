@@ -1,4 +1,9 @@
-{"message":"Hello world","level":"info"}
-{"message":"Hello world","level":"\u001b[32minfo\u001b[39m","timestamp":"2018-10-21 23:19:25"}
-{"message":"Hello world","level":"info","timestamp":"2018-10-21 23:19:57"}
-{"message":["ER_DUP_ENTRY",1062,"Duplicate entry 'test user 2-29-mumbai' for key 'uquser'"],"level":"info","timestamp":"2018-10-21 23:27:16"}
+{"message":"User Not Found","level":"info","timestamp":"2018-10-22 01:07:03"}
+{"message":"User Not Found","level":"info","timestamp":"2018-10-22 01:07:11"}
+{"message":"Hotel Not Found","level":"info","timestamp":"2018-10-22 01:07:17"}
+{"message":"Hotel Not Found","level":"info","timestamp":"2018-10-22 01:08:06"}
+{"message":"Hotel Not Found","level":"info","timestamp":"2018-10-22 01:09:29"}
+{"message":["ER_WRONG_VALUE_COUNT_ON_ROW",1136,"Column count doesn't match value count at row 1"],"level":"info","timestamp":"2018-10-22 01:11:21"}
+{"message":["ER_WRONG_VALUE_COUNT_ON_ROW",1136,"Column count doesn't match value count at row 1"],"level":"info","timestamp":"2018-10-22 01:15:55"}
+{"message":["ER_WRONG_VALUE_COUNT_ON_ROW",1136,"Column count doesn't match value count at row 1"],"level":"info","timestamp":"2018-10-22 01:17:11"}
+{"message":["ER_PARSE_ERROR",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '9, 'single room', 4000, 113' at line 1"],"level":"info","timestamp":"2018-10-22 01:17:40"}

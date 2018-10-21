@@ -51,9 +51,10 @@ let tokenServiceObj = new tokenServiceClass();
 
 
 routes.get('/', function (req, res) {
-    console.log("in routes");
+    console.log("Welcome to hotel API : https://documenter.getpostman.com/view/3407371/RWguxHLr ");
     res.status(200);
-    res.send("Welcome to hotel API");   
+    res.send("Welcome to hotel API : For All APIs :  https://documenter.getpostman.com/view/3407371/RWguxHLr"); 
+
 })
 
 /*============================================= User Routes =====================================================*/

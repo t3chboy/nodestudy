@@ -95,12 +95,12 @@ class userModel {
 
 			mysqlService.query( updateQuery , [ updateData , whereClause ], ( error, results ) =>{
 
-				if (results.affectedRows == 1) {
-					return resolve('Updated successfully.');
-				}
 				if (error) {
 					return reject([error.code , error.errno, error.sqlMessage]);
 				};
+				if (results.affectedRows == 1) {
+					return resolve('Updated successfully.');
+				}
 			})
 
 		});

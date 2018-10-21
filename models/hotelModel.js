@@ -17,7 +17,7 @@ class hotelModel {
 	create( requestParams ){
 
 		return new Promise((resolve,reject)=>{
-			console.log( requestParams.address );
+			
 			const userData = [ requestParams.name, requestParams.city, requestParams.state, requestParams.address, requestParams.total_room_count ];
 
 			const insertQuery = "INSERT INTO hotel_master ( name, city, state, address, total_room_count ) values ( ? , ? , ? , ? , ? ) ";

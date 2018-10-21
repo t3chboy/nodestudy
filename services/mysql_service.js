@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-console.log('mysql service');
+
 let poolConnection;
 /**
  * [connect This will create pool of connectino to be used later]

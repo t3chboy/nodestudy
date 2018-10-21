@@ -8,7 +8,6 @@ class UserController {
 
 	constructor() {
 		this._userModelObj = new userModelClass();
-		console.log( this );
 	}
 
 	/**
@@ -33,7 +32,7 @@ class UserController {
 
 	/**
 	 * [userDelete Soft delete user]
-	 * @param  {Number} userId [key value pairs with user update data]
+	 * @param  {Number} userId [unique user Id]
 	 * @return {[type]}        [success or error message]
 	 */
 	delete(userId) {
