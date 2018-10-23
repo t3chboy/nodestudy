@@ -102,12 +102,12 @@ class searchModel{
 			let sqlBookedRooms = "";
 			let sqlParams = "";
 			if( hotelId > 0 ){
-				sqlBookedRooms = " select hotel_id, room_id from booking_calendar where date( ? ) between date( check_in_date ) and date( check_out_date ) and hotel_id = ? and status = ? ";
-				sqlParams = [ bodyParams.check_in_date, hotelId , '1' ];
+				sqlBookedRooms = " select hotel_id, room_id from booking_calendar where ( date( ? ) between date( check_in_date ) and date( check_out_date ) OR date( ? ) between date( check_in_date ) and date( check_out_date ) ) and hotel_id = ? and status = ? ";
+				sqlParams = [ bodyParams.check_in_date,  bodyParams.check_out_date, hotelId , '1' ];
 				
 			}else{
-				sqlBookedRooms = " select hotel_id, room_id from booking_calendar where date( ? ) between date( check_in_date ) and date( check_out_date )  and status = ? ";
-				sqlParams = [ bodyParams.check_in_date, '1' ];
+				sqlBookedRooms = " select hotel_id, room_id from booking_calendar where ( date( ? ) between date( check_in_date ) and date( check_out_date ) OR date( ? ) between date( check_in_date ) and date( check_out_date ) )  and status = ? ";
+				sqlParams = [ bodyParams.check_in_date,  bodyParams.check_out_date, '1' ];
 			}
 
 			mysqlService.getConnection((err, connection)=>{

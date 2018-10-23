@@ -298,7 +298,7 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:4000/search/1/?check_in_date=2018-11-20",
+					"raw": "http://localhost:4000/search/1/?check_in_date=2018-11-13&check_out_date=2018-11-15",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -331,7 +331,7 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:4000/search/?check_in_date=2018-11-20",
+					"raw": "http://localhost:4000/search/?check_in_date=2018-11-13&check_out_date=2018-11-15",
 					"protocol": "http",
 					"host": [
 						"localhost"
